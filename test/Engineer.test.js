@@ -1,8 +1,8 @@
 const Engineer = require("../lib/Engineer");
 
 describe("engineer", () => {
-    // tests for methods
-  describe("get role", () => {
+
+describe("get role", () => {
     it("should return engineer as role", () => {
     const e = new Engineer("John", "0123", "john@mail.com","tmcash");
     expect(e.getRole()).toBe("Engineer");
@@ -15,7 +15,7 @@ describe("get github", () => {
     });
 });
 
-    //tests for properties
+
 describe("xtrainfo property", () => {
     it("should return github", () => {
     const e = new Engineer("John", "0123", "john@mail.com","tmcash");
@@ -29,7 +29,7 @@ describe("role property", () => {
     });
 });
 
-  // testing that an object is being created
+
 describe("object", () => {
     it("should return object", () => {
     const e = new Engineer();

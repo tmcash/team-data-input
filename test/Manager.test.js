@@ -1,7 +1,7 @@
 const Manager = require("../lib/Manager");
 
 describe("Manager", () => {
-    // tests for methods
+
 describe("get role", () => {
     it("should return engineer as role", () => {
     const e = new Manager("Joel", "0123", "joel@mail.com","012");
@@ -15,7 +15,7 @@ describe("get office number", () => {
     });
 });
 
-    //tests for properties
+
 describe("xtrainfo property", () => {
     it("should return 012", () => {
     const e = new Manager("Joel", "0123", "joel@mail.com","012");
@@ -29,7 +29,7 @@ describe("role property", () => {
     });
 });
 
-  // testing that an object is being created
+
 describe("object", () => {
     it("should return object", () => {
     const e = new Manager();

@@ -1,7 +1,7 @@
 const Employee = require("../lib/Employee");
 
 describe("employee", () => {
-    // tests for methods
+
 describe("get role", () => {
     it("should return Employee as role", () => {
     const e = new Employee("Tyler", "0123", "tyler@mail.com");
@@ -26,7 +26,7 @@ describe("get email", () => {
     expect(e.getEmail()).toBe("tyler@mail.com");
     });
 });
-  // tests for properties
+
 describe("empName property", () => {
     it("should return Tyler", () => {
     const e = new Employee("Tyler", "0123", "tyler@mail.com");
@@ -45,7 +45,7 @@ describe("id email property", () => {
     expect(e.email).toBe("tyler@mail.com");
     });
 });
-  // testing that an object is being created
+
 describe("object", () => {
     it("should return object", () => {
     const e = new Employee();

@@ -8,117 +8,136 @@ const Intern = require("./lib/Intern.js");
 // array of questions for user input
 const managerQuestions = [
   {
-    type: "input",
-    message: "Enter manager name:",
-    name: "name",
-    // default: "Mr Manager",
-    validate: validateInput,
+        type: "input",
+          message: "Enter manager name:",
+        name: "name",
+  
+        validate: validateInput,
   },
+
+
   {
-    type: "input",
-    message: "Enter manager employee ID:",
-    name: "empid",
-    // default: "1234",
-    validate: validateInput,
+        type: "input",
+      message: "Enter manager employee ID:",
+      name: "empid",
+    
+      validate: validateInput,
   },
+
+
   {
     type: "input",
     message: "Enter manager email:",
     name: "email",
-    // default: "manager@business.com",
+    
+    validate: validateInput,
+  },
+
+
+  {
+        type: "input",
+        message: "Enter manager office number:",
+        name: "xtrainfo",
+    
     validate: validateInput,
   },
   {
-    type: "input",
-    message: "Enter manager office number:",
-    name: "xtrainfo",
-    // default: "123",
-    validate: validateInput,
-  },
-  {
-    type: "list",
-    choices: [
-      { name: "Engineer" },
-      { name: "Intern" },
-      { name: "Finish building your team." },
-    ],
-    message: "Add an engineer, add an intern, or finish building your team.",
-    name: "nextoption",
-    // default: "Add an engineer to the team",
+            type: "list",
+            choices: [
+              { name: "Engineer" },
+              { name: "Intern" },
+              { name: "Finish building your team." },
+            ],
+            message: "Add an engineer, add an intern, or finish building your team.",
+            name: "nextoption",
+  
   },
 ];
 
 const engineerQuestions = [
-  {
-    type: "input",
-    message: "Enter employee name:",
-    name: "name",
-    // default: "Mr Engineer",
-    validate: validateInput,
+            {
+              type: "input",
+            message: "Enter employee name:",
+            name: "name",
+          
+          validate: validateInput,
   },
+
+
   {
-    type: "input",
-    message: "Enter engineer employee ID:",
-    name: "empid",
-    // default: "1234",
-    validate: validateInput,
+            type: "input",
+            message: "Enter engineer employee ID:",
+            name: "empid",
+          
+            validate: validateInput,
   },
+
+
   {
-    type: "input",
-    message: "Enter engineer email:",
-    name: "email",
-    // default: "engineer@business.com",
-    validate: validateInput,
+          type: "input",
+          message: "Enter engineer email:",
+          name: "email",
+        
+          validate: validateInput,
   },
+
+
   {
-    type: "input",
-    message: "Enter engineer Github:",
-    name: "xtrainfo",
-    // default: "engineer_01",
-    validate: validateInput,
+          type: "input",
+          message: "Enter engineer Github:",
+          name: "xtrainfo",
+
+          validate: validateInput,
   },
+
+
   {
     type: "list",
     choices: [
-      { name: "Engineer" },
-      { name: "Intern" },
-      { name: "Finish building your team." },
+        { name: "Engineer" },
+        { name: "Intern" },
+        { name: "Finish building your team." },
     ],
     message: "Add an engineer, add an intern, or finish building your team.",
     name: "nextoption",
-    // default: "Add an engineer to the team",
+
   },
 ];
 
 const internQuestions = [
-  {
+    {
     type: "input",
     message: "Enter employee name:",
     name: "name",
-    // default: "Mr Intern",
+
     validate: validateInput,
   },
+
+
   {
     type: "input",
     message: "Enter intern employee ID:",
     name: "empid",
-    // default: "1234",
+  
     validate: validateInput,
   },
   {
     type: "input",
     message: "Enter intern email:",
     name: "email",
-    // default: "intern@business.com",
+  
     validate: validateInput,
   },
+
   {
     type: "input",
     message: "Enter intern's school:",
     name: "xtrainfo",
-    // default: "University of Interns",
+  
     validate: validateInput,
   },
+
+
   {
     type: "list",
     choices: [
@@ -128,13 +147,13 @@ const internQuestions = [
     ],
     message: "Add an engineer, add an intern, or finish building your team.",
     name: "nextoption",
-    // default: "Add an engineer to the team",
+  
   },
 ];
 
 let teamArray = [];
 
-// initialize function
+
 function init(response) {
   inquirer.prompt(managerQuestions).then((response) => {
     const manager = new Manager(
@@ -143,7 +162,7 @@ function init(response) {
       response.email,
       response.xtrainfo
     );
-    // add manager to team array
+
     teamArray.push(manager);
     nextQuestions(response);
   });
@@ -151,24 +170,25 @@ function init(response) {
 
 init();
 
-// code to decide which set of questions to run next
+
 function nextQuestions(response) {
   if (response.nextoption === "Finish building your team.") {
-    // generate html
+
     generateHTML(teamArray);
   }
   if (response.nextoption === "Engineer") {
-    // run engineer inquirer
+    
     engineerInquirer();
   }
   else if (response.nextoption === "Intern") {
-    // run intern inquirer
+    
     internInquirer();
   }
 }
 
+// creates id cards for each team member.
 function generateHTML (teamArray) {
-    //generate html for a card for each team member within an array using .map
+
     const cardArray = teamArray.map( teamMember =>`
     <div class="card" style="width: 18rem;">
         <div class="card-body">
@@ -185,15 +205,15 @@ function generateHTML (teamArray) {
     </div>
     `)
 
-    // generate html that card html will reside within
+
 const htmlWrapper = `<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-    <title>My Team</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+<title>My Team</title>
 </head>
 <body>
 <h1 class = "text-center">My Team</h1>
@@ -203,7 +223,9 @@ const htmlWrapper = `<!DOCTYPE html>
 </body>
 </html>`;
 
-  // create index.html file with htmlWrapper variable
+
+//creates html file
+
 fs.writeFile(
     "./dist/index.html",
     `${htmlWrapper}
@@ -213,7 +235,7 @@ fs.writeFile(
 
 }
 
-// if user selected engineer, run questions for engineers
+
 function engineerInquirer(response) {
 inquirer.prompt(engineerQuestions).then((response) => {
     const engineer = new Engineer(
@@ -222,30 +244,30 @@ inquirer.prompt(engineerQuestions).then((response) => {
     response.email,
     response.xtrainfo,
     );
-    // add new engineer team member to team array
+
     teamArray.push(engineer);
     nextQuestions(response);
 });
 }
 
-// if user selected intern, run questions for interns
+
 function internInquirer(response) {
 inquirer.prompt(internQuestions).then((response) => {
-    const intern = new Intern(
-    response.name,
-    response.empid,
-    response.email,
-    response.xtrainfo,
+            const intern = new Intern(
+            response.name,
+            response.empid,
+            response.email,
+            response.xtrainfo,
     );
-    // add new intern team member to team array
+
     teamArray.push(intern);
     nextQuestions(response);
 });
 }
 
-// validate input
+
 function validateInput(input) {
-if (input === "") {
+      if (input === "") {
     console.log("Please enter a value.");
     return false;
 } else {

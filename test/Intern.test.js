@@ -1,7 +1,7 @@
 const Intern = require("../lib/Intern");
 
 describe("intern", () => {
-    // tests for methods
+
 describe("get role", () => {
     it("should return intern as role", () => {
     const e = new Intern("Robert", "0123", "robert@mail.com","Coding Bootcamp");
@@ -15,7 +15,7 @@ describe("get school", () => {
     });
 });
 
-    //tests for properties
+
 describe("xtrainfo property", () => {
     it("should return school of hard knocks", () => {
     const e = new Intern("Robert", "0123", "robert@mail.com","Coding Bootcamp");
@@ -29,7 +29,7 @@ describe("role property", () => {
     });
 });
 
-  // testing that an object is being created
+
 describe("object", () => {
     it("should return object", () => {
     const e = new Intern();
