@@ -1,7 +1,7 @@
 # ![License licenseInfo](https://img.shields.io/badge/License-MIT-yellow.svg)  
 # Team Data Input App
 ## Description
-The purpose of this application is to provide a website that save notes for certain events thorughout the day. it also proivdes descriptions for each individual note saved.
+The purpose of this application is to create an html page with team member cards using the terminal.
 ## Table of Contents
 [Installation](#installation)  
 [Usage](#usage)  
