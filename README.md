@@ -23,9 +23,9 @@ Install jest, cd into the test folder then run the command "npm run test" to run
 ## Demonstration
 * Video Demonstration: https://drive.google.com/file/d/1GckfMJhuViwxDgHVumJvHV9JAdzsW2JT/view
 ## Screenshot
-<img src="./assets/Screenshot(44).png" alt = "screenshot of deployed team data input site"/>
+![Generated html](/assets/image/image.png)
 
 ## Questions
 GitHub profile: [tmcash](https://www.github.com/tmcash)    
-Email address: \t.cash15@yahoo.com  
+Email address: t.cash15@yahoo.com  
 Please email me to reach me with additional questions
