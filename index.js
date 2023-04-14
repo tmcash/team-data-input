@@ -106,44 +106,44 @@ const engineerQuestions = [
 
 const internQuestions = [
     {
-    type: "input",
-    message: "Enter employee name:",
-    name: "name",
+        type: "input",
+        message: "Enter employee name:",
+        name: "name",
 
-    validate: validateInput,
+        validate: validateInput,
   },
 
 
   {
-    type: "input",
-    message: "Enter intern employee ID:",
-    name: "empid",
+        type: "input",
+        message: "Enter intern employee ID:",
+        name: "empid",
   
     validate: validateInput,
   },
   {
-    type: "input",
-    message: "Enter intern email:",
-    name: "email",
+        type: "input",
+        message: "Enter intern email:",
+        name: "email",
   
     validate: validateInput,
   },
 
   {
-    type: "input",
-    message: "Enter intern's school:",
-    name: "xtrainfo",
+        type: "input",
+        message: "Enter intern's school:",
+        name: "xtrainfo",
   
-    validate: validateInput,
+      validate: validateInput,
   },
 
 
   {
     type: "list",
     choices: [
-      { name: "Engineer" },
-      { name: "Intern" },
-      { name: "Finish building your team." },
+          { name: "Engineer" },
+          { name: "Intern" },
+          { name: "Finish building your team." },
     ],
     message: "Add an engineer, add an intern, or finish building your team.",
     name: "nextoption",
@@ -170,7 +170,7 @@ function init(response) {
 
 init();
 
-
+// generates the html
 function nextQuestions(response) {
   if (response.nextoption === "Finish building your team.") {
 
@@ -224,7 +224,7 @@ const htmlWrapper = `<!DOCTYPE html>
 </html>`;
 
 
-//creates html file
+//writes  html file
 
 fs.writeFile(
     "./dist/index.html",
@@ -260,7 +260,7 @@ inquirer.prompt(internQuestions).then((response) => {
             response.xtrainfo,
     );
 
-    teamArray.push(intern);
+          teamArray.push(intern);
     nextQuestions(response);
 });
 }
