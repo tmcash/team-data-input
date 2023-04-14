@@ -1,6 +1,8 @@
 // packages used to run the application
 const inquirer = require("inquirer");
 const fs = require("fs");
+
+// pulling in js for each employee
 const Manager = require("./lib/Manager.js");
 const Engineer = require("./lib/Engineer.js");
 const Intern = require("./lib/Intern.js");
