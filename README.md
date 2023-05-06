@@ -21,9 +21,9 @@ Fork the code to contribute!
 ## Tests
 Install jest, cd into the test folder then run the command "npm run test" to run all tests.
 ## Demonstration
-* Video Demonstration: https://drive.google.com/file/d/1GckfMJhuViwxDgHVumJvHV9JAdzsW2JT/view
+
 ## Screenshot
-![Generated html](/assets/image/image.png)
+
 
 ## Questions
 GitHub profile: [tmcash](https://www.github.com/tmcash)    

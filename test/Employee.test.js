@@ -10,11 +10,14 @@ describe("get role", () => {
 });
 
 
+
+
+
 describe("get name", () => {
-        it("should return Tyler as name", () => {
-        const e = new Employee("Tyler", "0123", "tyler@mail.com");
-        expect(e.getName()).toBe("Tyler");
-    });
+it("should return Tyler as name", () => {
+const e = new Employee("Tyler", "0123", "tyler@mail.com");
+expect(e.getName()).toBe("Tyler");
+});
 });
 
 
