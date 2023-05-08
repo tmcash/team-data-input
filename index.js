@@ -13,24 +13,32 @@ const managerQuestions = [
     name: "name",
     validate: validateInput,
   },
+
+
   {
     type: "input",
     message: "Enter manager employee ID:",
     name: "empid",
     validate: validateInput,
   },
+
+
   {
     type: "input",
     message: "Enter manager email:",
     name: "email",
     validate: validateInput,
   },
+
+
   {
     type: "input",
     message: "Enter manager office number:",
     name: "xtrainfo",
     validate: validateInput,
   },
+
+
   {
     type: "list",
     choices: [
@@ -68,6 +76,8 @@ const engineerQuestions = [
     name: "xtrainfo",
     validate: validateInput,
   },
+
+
   {
     type: "list",
     choices: [
@@ -87,24 +97,32 @@ const internQuestions = [
     name: "name",
     validate: validateInput,
   },
+
+
   {
     type: "input",
     message: "Enter intern employee ID:",
     name: "empid",
     validate: validateInput,
   },
+
+
   {
     type: "input",
     message: "Enter intern email:",
     name: "email",
     validate: validateInput,
   },
+
+
   {
     type: "input",
     message: "Enter intern's school:",
     name: "xtrainfo",
     validate: validateInput,
   },
+
+  
   {
     type: "list",
     choices: [
@@ -139,3 +157,5 @@ init();
 async function nextQuestions(response) {
   if (response.nextoption === "Finish building your team.") {
     generateHTML(teamArray);
+  };
+};
