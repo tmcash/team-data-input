@@ -11,7 +11,7 @@ const managerQuestions = [
     type: "input",
     message: "Enter manager name:",
     name: "name",
-    validate: validateInput,
+
   },
 
 
@@ -19,7 +19,7 @@ const managerQuestions = [
     type: "input",
     message: "Enter manager employee ID:",
     name: "empid",
-    validate: validateInput,
+   
   },
 
 
@@ -27,7 +27,7 @@ const managerQuestions = [
     type: "input",
     message: "Enter manager email:",
     name: "email",
-    validate: validateInput,
+   
   },
 
 
@@ -35,7 +35,7 @@ const managerQuestions = [
     type: "input",
     message: "Enter manager office number:",
     name: "xtrainfo",
-    validate: validateInput,
+  
   },
 
 
@@ -56,25 +56,25 @@ const engineerQuestions = [
     type: "input",
     message: "Enter employee name:",
     name: "name",
-    validate: validateInput,
+  
   },
   {
     type: "input",
     message: "Enter engineer employee ID:",
     name: "empid",
-    validate: validateInput,
+   
   },
   {
     type: "input",
     message: "Enter engineer email:",
     name: "email",
-    validate: validateInput,
+    
   },
   {
     type: "input",
     message: "Enter engineer Github:",
     name: "xtrainfo",
-    validate: validateInput,
+
   },
 
 
@@ -95,7 +95,7 @@ const internQuestions = [
     type: "input",
     message: "Enter employee name:",
     name: "name",
-    validate: validateInput,
+   
   },
 
 
@@ -103,7 +103,7 @@ const internQuestions = [
     type: "input",
     message: "Enter intern employee ID:",
     name: "empid",
-    validate: validateInput,
+  
   },
 
 
@@ -111,7 +111,7 @@ const internQuestions = [
     type: "input",
     message: "Enter intern email:",
     name: "email",
-    validate: validateInput,
+
   },
 
 
@@ -119,10 +119,10 @@ const internQuestions = [
     type: "input",
     message: "Enter intern's school:",
     name: "xtrainfo",
-    validate: validateInput,
+ 
   },
 
-  
+
   {
     type: "list",
     choices: [
